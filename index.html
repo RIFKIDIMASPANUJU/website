@@ -8,26 +8,28 @@
 <body>
     <h1>Selamat Datang di Latihan HTML</h1>
     <p>Ini adalah contoh halaman HTML sederhana.</p>
-    <card>
+  
         <h1>
             konversi
         </h1>
         <form>
             <label for="celsius">kilo gram:</label>
-            <input type="number" id="1" name="kilo" placeholder="Masukkan kilo gram">
-            <input type="number" id="2" name="pon" readonly>
+            <input type="number" id="kilo" name="kilo" placeholder="Masukkan kilo gram">
+            <input type="number" id="pounds" name="pon" readonly>
             <button type="submit">Konversi</button>
             
         </form>
-    </card> <br>
+     <br>
     <a href="https://www.simpuldata.com">Kunjungi simpuldata.com</a>
 </body>
 <script>
     document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault();
-        const kilo = parseFloat(document.getElementById('1').value);
-        const pon = kilo * 2.20462; // 1 kilogram = 2.20462 pounds
-        document.getElementById('2').value = pon.toFixed(2);
+        const kilogram = parseFloat(document.getElementById('kilo').value);
+        console.log(kilogram)
+        const pounds = kilogram * 2.20462; // 1 kilogram = 2.20462 pounds
+        console.log(pounds)
+        document.getElementById('pounds').value = pounds.toFixed(3);
     });
 </script>
 </html>
